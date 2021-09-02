@@ -22,9 +22,9 @@ public class num14501 {
             return;
         }
         // 3. 다음 경우 호출
-        // 상담을 한다.
-        go(day+1, sum);
         // 상담을 하지 않는다.
+        go(day+1, sum);
+        // 상담을 한다.
         go(day+t[day], sum+p[day]);
     }
     public static void main(String args[]) {

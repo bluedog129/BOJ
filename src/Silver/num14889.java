@@ -6,6 +6,7 @@ public class num14889 {
     static int[][] s;
     static int n;
     static int go(int index, ArrayList<Integer> first, ArrayList<Integer> second) {
+    	// 정답을 찾은 경우
         if (index == n) {
             if (first.size() != n/2) return -1;
             if (second.size() != n/2) return -1;
@@ -21,6 +22,7 @@ public class num14889 {
             int diff = Math.abs(t1-t2);
             return diff;
         }
+        // 불가능한 경우
         if (first.size() > n/2) return -1;
         if (second.size() > n/2) return -1;
         int ans = -1;
@@ -40,6 +42,7 @@ public class num14889 {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        
         n = sc.nextInt();
         s = new int[n][n];
         for (int i=0; i<n; i++) {
@@ -47,6 +50,7 @@ public class num14889 {
                 s[i][j] = sc.nextInt();
             }
         }
+        
         ArrayList<Integer> first = new ArrayList<>();
         ArrayList<Integer> second = new ArrayList<>();
         System.out.println(go(0, first, second));
